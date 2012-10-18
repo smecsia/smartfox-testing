@@ -17,8 +17,8 @@ You can easily check the input and output of your client request handlers like s
                 fromUser,
 
                 doRequest().
-                        putString(Constants.Param.MESSAGE, "Hello!").
-                        putInt(Constants.Param.TO_USER_ID, toUser.getId()),
+                        putString("message", "Hello!").
+                        putInt("toUserId", toUser.getId()),
                 then(
                         user(toUser).
                                 getResponse("privateMessage").
