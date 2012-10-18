@@ -10,7 +10,7 @@ import com.smartfoxserver.v2.extensions.BaseServerEventHandler;
  */
 public abstract class AbstractServerEventHandlerTest extends AbstractHandlerTest {
 
-    protected ServerEvent eventOccured(SFSEventType type) {
+    protected ServerEvent eventOccurred(SFSEventType type) {
         return new ServerEvent(type);
     }
 
