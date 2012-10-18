@@ -1,0 +1,6 @@
+*.ipr
+atlassian-ide-plugin.xml
+.idea
+target
+*.iml
+smartfox-server-local
