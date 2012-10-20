@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static me.smecsia.smartfox.testing.MatchersFacade.eq;
-import static me.smecsia.smartfox.testing.util.ExceptionUtil.formatStackTrace;
+import static me.smecsia.smartfox.tools.util.ExceptionUtil.formatStackTrace;
 import static org.powermock.api.mockito.PowerMockito.verifyPrivate;
 
 /**

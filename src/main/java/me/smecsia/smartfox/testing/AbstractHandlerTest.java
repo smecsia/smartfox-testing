@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static me.smecsia.smartfox.testing.MatchersFacade.any;
-import static me.smecsia.smartfox.testing.util.ExceptionUtil.formatStackTrace;
+import static me.smecsia.smartfox.tools.util.ExceptionUtil.formatStackTrace;
 import static org.junit.Assert.fail;
 import static org.mockito.Matchers.anyString;
 import static org.powermock.api.mockito.PowerMockito.*;

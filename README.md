@@ -60,3 +60,9 @@ You can also test your server event handlers in the following manner:
 ```
 
 ## How to use
+
+## Supported SmartFox versions
+
+* 2.3.0
+
+## Changelog
