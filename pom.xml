@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <artifactId>smartfox-testing</artifactId>
     <packaging>jar</packaging>
-    <groupId>me.smecsia.smartfox.testing</groupId>
+    <groupId>me.smecsia.smartfox</groupId>
     <version>2.3.0-SNAPSHOT</version>
     <modelVersion>4.0.0</modelVersion>
 
