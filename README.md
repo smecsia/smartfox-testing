@@ -8,7 +8,7 @@ You can easily check the input and output of your client request handlers like s
 ```java
 
     @Test
-    public void testPrivateMessageSendError() throws Exception {
+    public void testPrivateMessageSendError() {
         User fromUser = player("Guest1");
         User toUser = player("Guest2");
         setPlayersInRoom(fromUser, toUser);
@@ -60,6 +60,35 @@ You can also test your server event handlers in the following manner:
 ```
 
 ## How to use
+
+First you need to setup the environment to use Maven as a builder for your SmartFox server extension. You can follow
+[this tutorial](http://smecsia.me/blog/74/Developing+the+extension+for+Smartfox+server+using+Maven%2C+Spring%2C+Hibernate+and+Kundera)
+to see how to do it. Then you need to add the following repository and dependency to your pom.xml:
+
+```xml
+    <!-- ... -->
+    <dependencies>
+        <dependency>
+            <groupId>me.smecsia.smartfox</groupId>
+            <artifactId>smartfox-testing</artifactId>
+            <scope>test</scope>
+            <version>2.3.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+    <!-- ... -->
+    <repositories>
+        <repository>
+            <id>smecsia.me</id>
+            <name>smecsia public repository</name>
+            <url>http://maven.smecsia.me/</url>
+        </repository>
+    </repositories>
+    <!-- ... -->
+```
+
+And then you can extend the AbstractRequestHandlerTest and AbstractServerEventHandlerTest classes for your JUnit
+tests and use the features described above.
+
 
 ## Supported SmartFox versions
 
