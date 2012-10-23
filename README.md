@@ -63,7 +63,8 @@ You can also test your server event handlers in the following manner:
 
 First you need to setup the environment to use Maven as a builder for your SmartFox server extension. You can follow
 [this tutorial](http://smecsia.me/blog/74/Developing+the+extension+for+Smartfox+server+using+Maven%2C+Spring%2C+Hibernate+and+Kundera)
-to see how to do it. Then you need to add the following repository and dependency to your pom.xml:
+to see how to do it. Or you can start with [this example](https://github.com/smecsia/smartfox-extension-example). Then
+ you need to add the following repository and dependency to your pom.xml:
 
 ```xml
     <!-- ... -->
