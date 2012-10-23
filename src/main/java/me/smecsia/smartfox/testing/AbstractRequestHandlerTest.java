@@ -10,11 +10,13 @@ import com.smartfoxserver.v2.extensions.BaseClientRequestHandler;
  */
 public abstract class AbstractRequestHandlerTest extends AbstractHandlerTest {
 
+    protected void verifyWhen(User fromUser, Params request, ResponseVerifier... verifiers) {
+        verifyWhen((BaseClientRequestHandler) createHandler(), fromUser, request, verifiers);
+    }
     /**
      * Verify output against input
      */
-    protected void verifyWhen(User fromUser, Params request, ResponseVerifier... verifiers) {
-        BaseClientRequestHandler handler = createHandler(BaseClientRequestHandler.class);
+    protected void verifyWhen(BaseClientRequestHandler handler, User fromUser, Params request, ResponseVerifier... verifiers) {
         try {
             handler.handleClientRequest(fromUser, request.get());
             checkVerifiers(handler, verifiers);

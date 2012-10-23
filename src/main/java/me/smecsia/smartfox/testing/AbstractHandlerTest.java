@@ -7,6 +7,7 @@ import com.smartfoxserver.v2.entities.User;
 import com.smartfoxserver.v2.entities.data.ISFSObject;
 import com.smartfoxserver.v2.entities.data.SFSObject;
 import com.smartfoxserver.v2.exceptions.IErrorCode;
+import com.smartfoxserver.v2.extensions.BaseClientRequestHandler;
 import com.smartfoxserver.v2.extensions.BaseServerEventHandler;
 import org.junit.Before;
 import org.powermock.api.mockito.PowerMockito;
@@ -101,12 +102,24 @@ public abstract class AbstractHandlerTest extends AbstractRoomTest {
     }
 
     @SuppressWarnings("unchecked")
-    protected <T> T createHandler(Class<T> handlerType) {
+    protected <T> T createHandler() {
         try {
             String className = getClass().getName();
             String handlerClass = className.substring(0, className.length() - 4);
-            Class<T> clazz = (Class<T>) Class.forName(handlerClass);
-            if (clazz != null && handlerType.isAssignableFrom(clazz)) {
+            return createHandler((Class<T>) Class.forName(handlerClass));
+        } catch (Exception e) {
+            fail("Cannot create current request handler class:  " + e.getMessage() + ": \n " + formatStackTrace(e));
+            return null;
+        }
+    }
+
+    @SuppressWarnings("unchecked")
+    protected <T> T createHandler(Class<T> clazz) {
+        try {
+            if (clazz != null && (
+                    BaseServerEventHandler.class.isAssignableFrom(clazz) ||
+                            BaseClientRequestHandler.class.isAssignableFrom(clazz))
+                    ) {
                 T handler = initHandler(clazz);
                 if (handler != null) {
                     prepareBasicMocksIfRequired();
@@ -119,8 +132,8 @@ public abstract class AbstractHandlerTest extends AbstractRoomTest {
                 }
                 return handler;
             }
-            fail("Cannot find current client request handler class for:  " + className +
-                    " ( Tried to check class " + handlerClass + " ) ");
+            fail("Cannot find current client request handler class for:  " + getClass() +
+                    " ( Tried to check class " + clazz + " ) ");
             return null;
         } catch (Exception e) {
             fail("Cannot create current request handler class:  " + e.getMessage() + ": \n " + formatStackTrace(e));

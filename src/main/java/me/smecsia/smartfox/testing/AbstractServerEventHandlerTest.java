@@ -14,11 +14,7 @@ public abstract class AbstractServerEventHandlerTest extends AbstractHandlerTest
         return new ServerEvent(type);
     }
 
-    /**
-     * Verify output against input
-     */
-    protected void verifyWhen(ServerEvent event, ResponseVerifier... verifiers) {
-        BaseServerEventHandler handler = createHandler(BaseServerEventHandler.class);
+    protected void verifyWhen(BaseServerEventHandler handler, ServerEvent event, ResponseVerifier... verifiers) {
         try {
             for (ResponseVerifier verifier : verifiers) {
                 if (verifier instanceof ServerEventResponseVerifier) {
@@ -32,5 +28,12 @@ public abstract class AbstractServerEventHandlerTest extends AbstractHandlerTest
             return;
         }
         checkExceptionThrown(null, verifiers);
+    }
+
+    /**
+     * Verify output against input
+     */
+    protected void verifyWhen(ServerEvent event, ResponseVerifier... verifiers) {
+        verifyWhen((BaseServerEventHandler) createHandler(), event, verifiers);
     }
 }
