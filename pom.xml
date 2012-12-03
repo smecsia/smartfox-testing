@@ -31,7 +31,7 @@
         <dependency>
             <groupId>me.smecsia.smartfox</groupId>
             <artifactId>smartfox-tools</artifactId>
-            <version>0.2</version>
+            <version>0.5</version>
         </dependency>
         <dependency>
             <artifactId>smartfox</artifactId>
