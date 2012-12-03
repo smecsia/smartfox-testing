@@ -13,9 +13,9 @@
         <powermock.version>1.4.9</powermock.version>
     </properties>
     <scm>
-        <connection>scm:git:https://github.com/smecsia/smartfox-testing.git</connection>
-        <developerConnection>scm:git:https://github.com/smecsia/smartfox-testing.git</developerConnection>
-        <url>scm:git:https://github.com/smecsia/smartfox-testing.git</url>
+        <connection>scm:git:git@github.com:smecsia/smartfox-testing.git</connection>
+        <developerConnection>scm:git:git@github.com:smecsia/smartfox-testing.git</developerConnection>
+        <url>scm:git:git@github.com:smecsia/smartfox-testing.git</url>
         <tag>HEAD</tag>
     </scm>
 
