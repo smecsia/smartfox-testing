@@ -3,7 +3,7 @@
     <artifactId>smartfox-testing</artifactId>
     <packaging>jar</packaging>
     <groupId>me.smecsia.smartfox</groupId>
-    <version>0.2-SNAPSHOT</version>
+    <version>0.3-SNAPSHOT</version>
     <modelVersion>4.0.0</modelVersion>
 
     <properties>
