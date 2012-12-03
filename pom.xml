@@ -16,7 +16,7 @@
     </properties>
     <scm>
         <connection>scm:git:https://github.com/smecsia/smartfox-testing.git</connection>
-        <developerConnection>scm:git:ttps://github.com/smecsia/smartfox-testing.git</developerConnection>
+        <developerConnection>scm:git:https://github.com/smecsia/smartfox-testing.git</developerConnection>
         <url>scm:git:https://github.com/smecsia/smartfox-testing.git</url>
         <tag>HEAD</tag>
     </scm>
