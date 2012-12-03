@@ -11,11 +11,18 @@
     <properties>
         <project.compiler.version>1.6</project.compiler.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <sfs-server.jarPath>${project.basedir}/misc/tpl/sfs2x/sfs2x.jar</sfs-server.jarPath>
-        <sfs-core.jarPath>${project.basedir}/misc/tpl/sfs2x/sfs2x-core.jar</sfs-core.jarPath>
         <smartfox.version>2.3.0</smartfox.version>
         <powermock.version>1.4.9</powermock.version>
     </properties>
+
+
+    <repositories>
+        <repository>
+            <id>smecsia.me</id>
+            <name>smecsia public repository</name>
+            <url>http://maven.smecsia.me/</url>
+        </repository>
+    </repositories>
 
     <dependencies>
         <dependency>
@@ -27,15 +34,11 @@
             <artifactId>smartfox</artifactId>
             <groupId>smartfox-2x-server</groupId>
             <version>${smartfox.version}</version>
-            <scope>system</scope>
-            <systemPath>${sfs-server.jarPath}</systemPath>
         </dependency>
         <dependency>
             <artifactId>smartfox-core</artifactId>
             <groupId>smartfox-2x-server</groupId>
             <version>${smartfox.version}</version>
-            <scope>system</scope>
-            <systemPath>${sfs-core.jarPath}</systemPath>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
