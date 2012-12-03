@@ -2,6 +2,14 @@
 
 This is a small library helping you to write the JUnit tests for your custom SmartFox Server extensions.
 
+
+## Supported SmartFox versions
+
+* 2.3.0, 2.4.0
+
+## Changelog
+
+
 ## What it gives
 
 You can easily check the input and output of your client request handlers like so:
@@ -73,7 +81,7 @@ to see how to do it. Or you can start with [this example](https://github.com/sme
             <groupId>me.smecsia.smartfox</groupId>
             <artifactId>smartfox-testing</artifactId>
             <scope>test</scope>
-            <version>2.3.0-SNAPSHOT</version>
+            <version>0.2</version>
         </dependency>
     </dependencies>
     <!-- ... -->
@@ -89,10 +97,3 @@ to see how to do it. Or you can start with [this example](https://github.com/sme
 
 And then you can extend the AbstractRequestHandlerTest and AbstractServerEventHandlerTest classes for your JUnit
 tests and use the features described above.
-
-
-## Supported SmartFox versions
-
-* 2.3.0
-
-## Changelog
