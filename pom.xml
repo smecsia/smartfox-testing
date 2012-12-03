@@ -37,11 +37,13 @@
             <artifactId>smartfox</artifactId>
             <groupId>smartfox-2x-server</groupId>
             <version>${smartfox.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <artifactId>smartfox-core</artifactId>
             <groupId>smartfox-2x-server</groupId>
             <version>${smartfox.version}</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
