@@ -3,7 +3,7 @@
     <artifactId>smartfox-testing</artifactId>
     <packaging>jar</packaging>
     <groupId>me.smecsia.smartfox</groupId>
-    <version>0.3-SNAPSHOT</version>
+    <version>0.3</version>
     <modelVersion>4.0.0</modelVersion>
 
     <properties>
@@ -16,7 +16,7 @@
         <connection>scm:git:git@github.com:smecsia/smartfox-testing.git</connection>
         <developerConnection>scm:git:git@github.com:smecsia/smartfox-testing.git</developerConnection>
         <url>scm:git:git@github.com:smecsia/smartfox-testing.git</url>
-        <tag>HEAD</tag>
+        <tag>smartfox-testing-0.3</tag>
     </scm>
 
     <repositories>
