@@ -10,7 +10,6 @@ import java.util.Arrays;
 import java.util.List;
 
 import static me.smecsia.smartfox.testing.MatchersFacade.eq;
-import static me.smecsia.smartfox.tools.util.ExceptionUtil.formatStackTrace;
 import static org.powermock.api.mockito.PowerMockito.verifyPrivate;
 
 /**
@@ -52,12 +51,11 @@ public class SimpleResponseVerifier implements ResponseVerifier {
             if (!isGoalAchieved) {
                 throw new AssertionFailedError(getResponse().getRaisesException() +
                         ("( errorCode = " + errorCode + ", errorParams = " + errorParams + ")") + " is " +
-                        "expected  to be thrown, but was not. The following was thrown: " + e + ": \n" +
-                        formatStackTrace(e));
+                        "expected  to be thrown, but was not. The following was thrown: " + e);
             }
         } else if (response.isMustNotRaiseException() && e != null) {
             throw new AssertionFailedError("It is expected that there's no exception should be thrown, but there's" +
-                    " one:" + (e.getMessage()) + ": \n" + formatStackTrace(e));
+                    " one:" + (e.getMessage()));
         }
     }
 

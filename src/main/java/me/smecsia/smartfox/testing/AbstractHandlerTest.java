@@ -17,7 +17,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static me.smecsia.smartfox.testing.MatchersFacade.any;
-import static me.smecsia.smartfox.tools.util.ExceptionUtil.formatStackTrace;
 import static org.junit.Assert.fail;
 import static org.mockito.Matchers.anyString;
 import static org.powermock.api.mockito.PowerMockito.*;
@@ -108,7 +107,7 @@ public abstract class AbstractHandlerTest extends AbstractRoomTest {
             String handlerClass = className.substring(0, className.length() - 4);
             return createHandler((Class<T>) Class.forName(handlerClass));
         } catch (Exception e) {
-            fail("Cannot create current request handler class:  " + e.getMessage() + ": \n " + formatStackTrace(e));
+            fail("Cannot create current request handler class:  " + e.getMessage());
             return null;
         }
     }
@@ -136,7 +135,7 @@ public abstract class AbstractHandlerTest extends AbstractRoomTest {
                     " ( Tried to check class " + clazz + " ) ");
             return null;
         } catch (Exception e) {
-            fail("Cannot create current request handler class:  " + e.getMessage() + ": \n " + formatStackTrace(e));
+            fail("Cannot create current request handler class:  " + e.getMessage());
             return null;
         }
     }
@@ -147,8 +146,7 @@ public abstract class AbstractHandlerTest extends AbstractRoomTest {
                 verifier.doVerifyException(e);
             }
         } catch (AssertionError error) {
-            fail("Could not verify request and getResponse of a handler: " + ((e != null) ? e.getMessage() : e) + ": " +
-                    "\n" + formatStackTrace(error));
+            fail("Could not verify request and getResponse of a handler: " + ((e != null) ? e.getMessage() : e));
         }
     }
 
