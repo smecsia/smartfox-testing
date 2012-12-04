@@ -81,7 +81,7 @@ to see how to do it. Or you can start with [this example](https://github.com/sme
             <groupId>me.smecsia.smartfox</groupId>
             <artifactId>smartfox-testing</artifactId>
             <scope>test</scope>
-            <version>0.2</version>
+            <version>0.3</version>
         </dependency>
     </dependencies>
     <!-- ... -->
